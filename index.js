@@ -1,0 +1,1 @@
+module.exports=function(s,q){return s.match(new RegExp("(?=(.|[\r\n])*"+q.match(/"([^"]+)"|[\w]+/gi).join(")(?=(.|[\r\n])*").replace(/\"/g,'')+")(.|[\r\n])+","ig"))!=null}
