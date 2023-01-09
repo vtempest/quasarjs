@@ -1,13 +1,20 @@
 {
   "name": "quasarjs",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Quotes-Unifying Alphanumeric Search-ALL RegExp",
   "main": "index.js",
-  "keywords": ["RegExp", "search", "match", "quotes", "all", "any"],
+  "keywords": [
+    "RegExp",
+    "search",
+    "match",
+    "quotes",
+    "all",
+    "any"
+  ],
   "author": "vtempest",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gulakov/quasarjs"
+    "url": "https://github.com/vtempest/quasarjs"
   },
   "license": "MIT"
 }

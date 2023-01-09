@@ -2,4 +2,26 @@
 
 #### Quotes-Unifying Alphanumeric Search-ALL RegExp
 
-INPUT [0] TARGET STRING, SINGLE OR MULTILINE; INPUT [1] SEARCH STRING OF WORD/S, SEPARATED BY NON_ALPHANUMERICS, CASE INSENSITIVE, TO SEARCH **MATCHING ALL** WORDS, IN ANY ORDER, EXCEPT TREAT MATCHING SUBSTRING WORDS "IN QUOTES" IN THAT EXACT ORDER; RETURNS TRUE IF FOUND
+*quasar(base_text, search_term)*: Search base_text for matching-all words of search_term, case-insensitive in any order, except treat "words in quotes" as if a single word like in Google search.
+
+### Copy as Function Directly into Code
+```javascript
+
+var search_term_is_found = base_text.match(
+
+new RegExp("(?=(.|[\r\n])*" + search_term
+
+.match(/"([^"]+)"|[\w]+/gi)
+
+.join(")((.|[\?=r\n])*")
+
+.replace(/\"/g,'')+")(.|[\r\n])+", "ig")
+
+)!=null
+```
+
+### Built Using RegEx Negative Lookaheads 
+>bar(?=bar)     finds the 1st bar ("bar" which has "bar" after it)
+>bar(?!bar)     finds the 2nd bar ("bar" which does not have "bar" after it)
+>(?<=foo)bar    finds the 1st bar ("bar" which has "foo" before it)
+>(?<!foo)bar    finds the 2nd bar ("bar" which does not have "foo" before it)
