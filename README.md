@@ -1,5 +1,3 @@
-#### Quotes-Unifying Alphanumeric Search-ALL RegExp
-
 [![NPM](https://nodei.co/npm/quasarjs.png?compact=true)](https://npmjs.org/package/quasarjs)
 
 Search base_text for matching-all words of search_term, case-insensitive in any order, except treat "words in quotes" as if a single word like in Google search.

@@ -1,5 +1,5 @@
 
-// uses negative lookaheads to split search_term into words or "phrases" 
+// uses Regex negative lookaheads to split search_term into words and "phrases" 
 // returns true if all words found in base_text        
 module.exports=function(base_text, search_term){
     return base_text.match(
